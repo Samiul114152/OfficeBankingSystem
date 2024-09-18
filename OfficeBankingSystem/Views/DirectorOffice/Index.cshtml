@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="dashboard-breadcrumb mb-25">
+    <h2>Director Office List</h2><div class="col-6">
+        <button onclick="location.href='@Url.Action("Create", "DirectorOffice")'" class="btn btn-primary float-end">Add Director Office</button>
+    </div>
+
+</div>
+<div class="dashboard-breadcrumb mb-25">
+    <div class="row">
+        <div class="col-10">
+            <button onclick="history.back()" class=" btn btn-success"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+        </div>
+        <div class="col-2">
+            <button onclick="history.forward()" class="btn btn-primary float-end">Forward <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+        </div>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-bordered table-dashed table-hover digi-dataTable dataTable-resize table-striped" id="componentDataTable3">
+                        <thead>
+                            <tr>
+                                <th class="no-sort">
+                                    <div class="resize-col overflow-visible">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox">
+                                        </div>
+                                    </div>
+                                </th>
+                                <th><span class="resize-col">Office ID</span></th>
+                                <th><span class="resize-col">Office Name</span></th>
+                                <th><span class="resize-col">Office Code</span></th>
+                                <th><span class="resize-col">Authorize_user</span></th>
+                                <th><span class="resize-col">Contact Officer</span></th>
+                                <th><span class="resize-col">View</span></th>
+                                <th><span class="resize-col">Action</span></th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class=" overflow-visible">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox">
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="resize-col">Shaikh Abu Dardah</span></td>
+                                <td><span class="resize-col">admin</span></td>
+                                <td><span class="resize-col">December 27, 2022</span></td>
+                                <td><span class="resize-col">November 23, 2021</span></td>
+                                <td><span class="resize-col">example@info.com</span></td>
+                                <td><button class="form-control"><i class="fa-light fa-eye"></i> View</button></td>
+                                <td>
+                                    <div class="digi-dropdown dropdown d-inline-block">
+                                        <button class="btn btn-sm btn-outline-primary" data-bs-toggle="dropdown" aria-expanded="false">Action <i class="fa-regular fa-angle-down"></i></button>
+                                        <ul class="digi-dropdown-menu dropdown-menu dropdown-slim dropdown-menu-sm">
+                                            <li><a href="#" class="dropdown-item"><span class="dropdown-icon"><i class="fa-light fa-pen-to-square"></i></span> Edit</a></li>
+                                            <li><a href="#" class="dropdown-item"><span class="dropdown-icon"><i class="fa-light fa-id-card"></i></span> ID Card</a></li>
+                                            <li><a href="#" class="dropdown-item"><span class="dropdown-icon"><i class="fa-light fa-pen-nib"></i></span> Resign</a></li>
+                                            <li><a href="#" class="dropdown-item"><span class="dropdown-icon"><i class="fa-light fa-arrow-right-from-bracket"></i></span> Left</a></li>
+                                            <li><a href="#" class="dropdown-item"><span class="dropdown-icon"><i class="fa-light fa-trash-can"></i></span> Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

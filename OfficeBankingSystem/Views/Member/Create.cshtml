@@ -1,0 +1,508 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="dashboard-breadcrumb mb-15">
+    <h2>Member Create</h2>
+</div>
+<nav class="navbar navbar-expand-sm bg-light mb-25 mt-0">
+    <div class="container-fluid">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="p-1" href='@Url.Action("Index", "Home")'>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="p-1"><span>/</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="p-1" href='@Url.Action("Index", "Member")'>Member</a>
+            </li>
+            <li class="nav-item">
+                <a class="p-1"><span>/</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="p-1" href='@Url.Action("Create", "Member")'>Create</a>
+            </li>
+        </ul>
+        <ul class="float-end">
+            <a onclick="history.back()" class=" btn btn-sm btn-success"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</a>
+            <a onclick="history.forward()" class="btn btn-sm btn-primary">Forward <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+        </ul>
+        
+    </div>
+</nav>
+
+<div class="dashboard-breadcrumb mb-25">
+    <div class="row g-3">
+        <div class="card mb-20">
+            <div class="card-body">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="Samity" class="form-label">Samity<span style="color:red">*</span></label>
+                        <select id="Samity" name="Samity" class="form-control form-control-sm">
+                            <option selected>Choose...</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Member_Category" class="form-label">Member Category<span style="color:red">*</span></label>
+                        <select id="office_id" class="form-control form-control-sm">
+                            <option selected>Choose...</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <div class="panel-body">
+                            <div class="card mb-20">
+                                <div class="card-header">
+                                    Applicant's Name
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="Name_in_english" class="form-label">In English (According to ID) <span style="color:red">*</span></label>
+                                            <input type="text" name="Name_in_english" class="form-control form-control-sm" id="Name_in_english">
+                                        </div>
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="Name_in_unicode" class="form-label">In (Unicode)</label>
+                                            <input type="text" name="Name_in_unicode" class="form-control form-control-sm" id="Name_in_unicode">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-header">
+                                    Father's Name
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="Name_in_english" class="form-label">In English (According to ID) <span style="color:red">*</span></label>
+                                            <input type="text" name="Name_in_english" class="form-control form-control-sm" id="Name_in_english">
+                                        </div>
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="Name_in_unicode" class="form-label">In (Unicode)</label>
+                                            <input type="text" name="Name_in_unicode" class="form-control form-control-sm" id="Name_in_unicode">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-header">
+                                    Mother's Name
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="Name_in_english" class="form-label">In English (According to ID) <span style="color:red">*</span></label>
+                                            <input type="text" name="Name_in_english" class="form-control form-control-sm" id="Name_in_english">
+                                        </div>
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="Name_in_unicode" class="form-label">In (Unicode)</label>
+                                            <input type="text" name="Name_in_unicode" class="form-control form-control-sm" id="Name_in_unicode">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="panel-body">
+                            <div class="card mb-20">
+                                <div class="card-header">
+                                    Permanent Address
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Country</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Country">
+                                                <option value="">Choose Country</option>
+                                                <option value="0">Bangladesh</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Division</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Division">
+                                                <option value="">Choose Division</option>
+                                                <option value="0">Division 1</option>
+                                                <option value="1">Division 2</option>
+                                                <option value="2">Division 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">District</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose District">
+                                                <option value="">Choose District</option>
+                                                <option value="0">District 1</option>
+                                                <option value="1">District 2</option>
+                                                <option value="2">District 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Upozila</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Upozila">
+                                                <option value="">Choose Upozila</option>
+                                                <option value="0">Upozila 1</option>
+                                                <option value="1">Upozila 2</option>
+                                                <option value="2">Upozila 3</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Union</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Union">
+                                                <option value="">Choose Union</option>
+                                                <option value="0">Union 1</option>
+                                                <option value="1">Union 2</option>
+                                                <option value="2">Union 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Village/Street</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Village/Street">
+                                                <option value="">Choose Village/Street</option>
+                                                <option value="0">Village/Street 1</option>
+                                                <option value="1">Village/Street 2</option>
+                                                <option value="2">Village/Street 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Zip Code</label>
+                                            <input type="text" class="form-control form-control-sm">
+                                        </div>
+                                        <div class="col-xxl-6 col-lg-8">
+                                            <label class="form-label">Village / House / Road</label>
+                                            <input type="text" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header d-flex gap-4">
+                                    Present Address
+                                    <div class="form-check d-inline-flex">
+                                        <input class="form-check-input" type="checkbox" id="presentSameAsPermanent">
+                                        <label class="form-check-label" for="presentSameAsPermanent">
+                                            Present Address Same As Permanent Address
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Country</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Country">
+                                                <option value="">Choose Country</option>
+                                                <option value="0">Bangladesh</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Division</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Division">
+                                                <option value="">Choose Division</option>
+                                                <option value="0">Division 1</option>
+                                                <option value="1">Division 2</option>
+                                                <option value="2">Division 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">District</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose District">
+                                                <option value="">Choose District</option>
+                                                <option value="0">District 1</option>
+                                                <option value="1">District 2</option>
+                                                <option value="2">District 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Upozila</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Upozila">
+                                                <option value="">Choose Upozila</option>
+                                                <option value="0">Upozila 1</option>
+                                                <option value="1">Upozila 2</option>
+                                                <option value="2">Upozila 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Union</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Union">
+                                                <option value="">Choose Union</option>
+                                                <option value="0">Union 1</option>
+                                                <option value="1">Union 2</option>
+                                                <option value="2">Union 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Village/Street</label>
+                                            <select class="form-control form-control-sm" data-placeholder="Choose Village/Street">
+                                                <option value="">Choose Village/Street</option>
+                                                <option value="0">Village/Street 1</option>
+                                                <option value="1">Village/Street 2</option>
+                                                <option value="2">Village/Street 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label class="form-label">Zip Code</label>
+                                            <input type="text" class="form-control form-control-sm">
+                                        </div>
+                                        <div class="col-xxl-6 col-lg-8">
+                                            <label class="form-label">Village / House / Road</label>
+                                            <input type="text" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="panel-body">
+                            <div class="card mb-20">
+                                <div class="card-header">
+                                    Identify Information
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="Nid_number" class="form-label">National ID No <span style="color:red">*</span></label>
+                                            <input class="form-control form-control-sm" name="Nid_number" id="Nid_number" />
+                                        </div>
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="Smartcard_number" class="form-label">Smart Card Number</label>
+                                            <input class="form-control form-control-sm" name="Smartcard_number" id="Smartcard_number" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="panel-body">
+                            <div class="card mb-20">
+                                <div class="card-header">
+                                    Other Identify Information
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="IdentTypeID" class="form-label">IdentTypeID</label>
+                                            <select id="IdentTypeID" name="IdentTypeID" class="form-control form-control-sm">
+                                                <option selected>Choose...</option>
+                                                <option>Passport</option>
+                                                <option>Driving License</option>
+                                                <option>Birth Certificate</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                            <label for="Marital_status" class="form-label">Marital Status</label>
+                                            <select id="inputAuthorize_user4" class="form-control form-control-sm">
+                                                <option selected>Choose...</option>
+                                                <option>Single</option>
+                                                <option>Married</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="birthday" class="form-label">Date of Birth</label>
+                                            <input type="date" name="birthday" class="form-control form-control-sm" id="birthday">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="age" class="form-label">Age</label>
+                                            <input type="text" name="age" class="form-control form-control-sm" id="age">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="placeOfBirth" class="form-label">Place Of Birth</label>
+                                            <input type="placeOfBirth" name="placeOfBirth" class="form-control form-control-sm" id="placeOfBirth" placeholder="1234 Main St">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Citizenship" class="form-label">Citizenship</label>
+                                            <select id="Citizenship" class="form-control form-control-sm">
+                                                <option selected>Choose...</option>
+                                                <option value="1">Bangladeshi</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Gender" class="form-label">Gender</label>
+                                            <select id="Gender" class="form-control form-control-sm">
+                                                <option selected>Choose...</option>
+                                                <option value="1">Male</option>
+                                                <option>Female</option>
+                                                <option>others</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Admission_date" class="form-label">Admission Date</label>
+                                            <input type="date" name="Admission_date" class="form-control form-control-sm" id="Admission_date">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="home_type" class="form-label">Home Type</label>
+                                            <select id="home_type" name="home_type" class="form-control form-control-sm">
+                                                <option selected>Choose...</option>
+                                                <option value="1">1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="AcademicQualification" class="form-label">Academic Qualification</label>
+                                            <select id="AcademicQualification" name="AcademicQualification" class="form-control form-control-sm">
+                                                <option selected>Choose...</option>
+                                                <option value="1">1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Family_member" class="form-label">Family Member</label>
+                                            <input type="number" name="Family_Member" class="form-control form-control-sm" id="Family_member">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Email" class="form-label">Email </label>
+                                            <input type="Email" name="Email" class="form-control form-control-sm" id="Email">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Contact_number" class="form-label">Contact Number</label>
+                                            <input type="text" name="Contact_number" class="form-control form-control-sm" id="Contact_number">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Family_Contact_No" class="form-label">Family Contact No</label>
+                                            <input type="text" name="Family_Contact_No" class="form-control form-control-sm" id="Family_Contact_No">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Reference_name" class="form-label">Reference Name</label>
+                                            <input type="text" name="Reference_name" class="form-control form-control-sm" id="Reference_name">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Co_Applicant" class="form-label">Co Applicant Name(family Head)</label>
+                                            <input type="text" name="Co_Applicant" class="form-control form-control-sm" id="Co_Applicant">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Occupation" class="form-label">Occupation</label>
+                                            <select id="Occupation" name="Occupation" class="form-control form-control-sm">
+                                                <option selected>Choose...</option>
+                                                <option value="1">1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-6 col-lg-8 col-sm-6">
+                                            <label for="Total_wealth" class="form-label">Total Wealth</label>
+                                            <input type="text" name="Total_wealth" class="form-control form-control-sm" id="Total_wealth">
+                                        </div>
+                                        <div class="col-xxl-3 col-lg-4 col-sm-6">
+                                            <label for="Member_type" class="form-label">Member Type</label>
+                                            <select id="Member_type" name="Member_type" class="form-control form-control-sm">
+                                                <option selected>Choose...</option>
+                                                <option value="1">1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xxl-6 col-lg-6 col-sm-6">
+                                            <label for="TIN" class="form-label">TIN</label>
+                                            <input type="text" name="TIN" class="form-control form-control-sm" id="TIN">
+                                        </div>
+                                        <div class="col-xxl-6 col-lg-6 col-sm-6">
+                                            <label for="Tax_Amount" class="form-label">Tax Amount</label>
+                                            <input type="text" name="Tax_Amount" class="form-control form-control-sm" id="Tax_Amount">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="panel-body">
+                                <div class="card mb-20">
+                                    <div class="card-body">
+                                        <div class="row g-3">
+                                            <div class="col-xxl-4 col-lg-6 col-sm-6">
+                                                <label for="Member_mobile_service" class="form-label">Member's use any mobile finalcial service?</label>
+                                                <select id="Member_mobile_service" name="Member_mobile_service" class="form-control form-control-sm">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xxl-6 col-lg-6 col-sm-6">
+                                                <label for="Transaction_medium" class="form-label">Transaction Medium</label>
+                                                <select id="Transaction_medium" name="Transaction_medium" class="form-control form-control-sm">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xxl-6 col-lg-6 col-sm-6">
+                                                <label for="NID_Check_status" class="form-label">NID Check Status</label>
+                                                <select id="NID_Check_status" name="NID_Check_status" class="form-control form-control-sm">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xxl-6 col-lg-6 col-sm-6">
+                                                <label for="Address_per_NID" class="form-label">Address Per NID</label>
+                                                <select id="Address_per_NID" name="Address_per_NID" class="form-control form-control-sm">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="panel-body">
+                                <div class="card mb-20">
+                                    <div class="card-body">
+                                        <div class="row g-3">
+                                            <div class="tab-content product-data-tab" id="nav-tabContent">
+                                                <div class="tab-pane fade show active" id="nav-media" role="tabpanel" aria-labelledby="nav-media-tab" tabindex="0">
+                                                    <div class="row">
+                                                        <div class="col-xxl-3 col-md-6 col-5 col-xs-12">
+                                                            <div class="add-thumbnail product-image-upload">
+                                                                <div class="part-txt">
+                                                                    <h5>Member Image<span>(jpeg/png)</span></h5>
+                                                                </div>
+                                                                <input type="text" class="image-input" id="thumbUpload">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xxl-9 col-md-6 col-7 col-xs-12">
+                                                            <div class="add-gallery-img product-image-upload">
+                                                                <div class="part-txt">
+                                                                    <h5>Thumb Image<span>(jpeg/png)</span></h5>
+                                                                </div>
+                                                                <input type="text" class="image-input" id="galleryUpload">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                                            <br />
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+</form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
