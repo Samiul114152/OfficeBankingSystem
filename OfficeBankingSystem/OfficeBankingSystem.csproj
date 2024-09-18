@@ -132,6 +132,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\smallLogo.png" />
+    <Content Include="assets\codegen.png" />
     <Content Include="assets\css\blue-color.css" />
     <Content Include="assets\css\deep_pink-color.css" />
     <Content Include="assets\css\eagle_green-color.css" />
